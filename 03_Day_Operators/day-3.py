@@ -1,6 +1,8 @@
+import math
+
 # Arithmetic Operations in Python
 # Integers
-
+"""
 print('Addition: ', 1 + 2)
 print('Subtraction: ', 2 - 1)
 print('Multiplication: ', 2 * 3)
@@ -122,3 +124,104 @@ print(not True)      # False - Negation, the not operator turns true to false
 print(not False)     # True
 print(not not True)  # True
 print(not not False) # False
+"""
+
+def triangle_area():
+    
+    base = int(input("Enter base: "))
+    height = int(input("Enter height: "))
+    area = 0.5*(base*height)
+    print("The area of the triangle is:", area)
+
+def triangle_perimeter():
+    
+    a = int(input("Enter side a: "))
+    b = int(input("Enter side b: "))
+    c = int(input("Enter side c: "))
+    print("The perimeter of the triangle is", sum([a,b,c]))
+
+def rectangle():
+    
+    length = int(input("Enter the length: "))
+    width = int(input("Enter the width: "))
+    
+    area = length * width
+    perimeter = 2 * (length + width)
+    
+    print(f"The area of the rectangle is {area} and the perimeter {perimeter}")
+
+def circle():
+    
+    radius = int(input("Enter the radius: "))
+    
+    area = math.pi * radius ** 2
+    circumference = 2 * math.pi * radius
+    
+    print(f"The area of the circle is {area} and the circumference is {circumference}")
+
+def function_1(x: int) -> int:
+    return 2 * x -2
+
+class Linear_function():
+    
+    def __init__(self, slope, y_intercept) -> None:
+        
+        self.slope = slope
+        self.y_intercept = y_intercept
+        self.function = lambda x: self.slope * x + self.y_intercept
+    
+    def __call__(self, x) -> float:
+        return self.function(x)
+    
+    def calculate_slope(self, x1=5, x2=7) -> float:
+        
+        y1 = self.function(x1)
+        y2 = self.function(x2)
+        
+        return (y2 - y1) / (x2 - x1)
+    
+    def calculate_x_intercept(self) -> float:
+        # y = m * x + b
+        # x = (y - b) / m
+        
+        return (0 - self.y_intercept) / self.slope
+    
+    def calculate_y_intercept(self, x=5) -> float:
+        # y = m * x + b
+        # b = y - m * x
+        y = self.function(x)
+        return y - self.slope * x
+
+
+def calculate_slope(f):
+    
+    x1 = 5
+    x2 = 7
+    
+    y1 = f(x1)
+    y2 = f(x2)
+    
+    slope = (y2 - y1) / (x2 - x1)
+    
+    return slope
+
+def calculate_slope_of_two_points(p1:tuple, p2:tuple)
+
+
+if __name__ == "__main__":
+    
+    # age = 24
+    # my_height = 1.83
+    # complex_number = 1j
+    
+    my_function = Linear_function(slope=2, y_intercept=-2)
+    
+    slope = my_function.calculate_slope()
+    print(slope)
+    
+    x_intercept = my_function.calculate_x_intercept()
+    print(x_intercept)
+    
+    y_intercept = my_function.calculate_y_intercept()
+    print(y_intercept)
+    
