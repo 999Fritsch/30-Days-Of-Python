@@ -205,8 +205,14 @@ def calculate_slope(f):
     
     return slope
 
-def calculate_slope_of_two_points(p1:tuple, p2:tuple)
+def calculate_slope_of_two_points(p1:tuple, p2:tuple) -> float:
+    return (p2[1] - p1[1]) / (p2[0] - p1[0])
 
+def calculate_euclidean_distance_of_two_points(p1:tuple, p2:tuple) -> float:
+    return math.sqrt((p2[0]-p1[0])**2+(p2[1]-p1[1])**2)
+
+def function_2(x):
+    return x**2 + 6*x + 9
 
 if __name__ == "__main__":
     
@@ -214,14 +220,38 @@ if __name__ == "__main__":
     # my_height = 1.83
     # complex_number = 1j
     
-    my_function = Linear_function(slope=2, y_intercept=-2)
+    # my_function = Linear_function(slope=2, y_intercept=-2)
+    # 
+    # slope = my_function.calculate_slope()
+    # print(slope)
+    # 
+    # x_intercept = my_function.calculate_x_intercept()
+    # print(x_intercept)
+    # 
+    # y_intercept = my_function.calculate_y_intercept()
+    # print(y_intercept)
     
-    slope = my_function.calculate_slope()
-    print(slope)
+    # slope = calculate_slope_of_two_points((2,2), (6,10))
+    # print(slope)
+    # 
+    # distance = calculate_euclidean_distance_of_two_points((2,2), (6,10))
+    # print(distance)
     
-    x_intercept = my_function.calculate_x_intercept()
-    print(x_intercept)
+    # print(function_2(-3))
     
-    y_intercept = my_function.calculate_y_intercept()
-    print(y_intercept)
+    print(len("python"))
+    print(len("dragon"))
+    print(len("python") > len("dragon"))
     
+    print("on" in "python" and "on" in "dragon")
+    
+    print("jargon" in "I hope this course is not full of jargon")
+    
+    print(str(float(len("python"))))
+    
+    number = 3
+    remainder = number % 2
+    if remainder == 0:
+        print("dividable by 2")
+    else:
+        print("not dividable by 2")
