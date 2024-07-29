@@ -214,19 +214,54 @@ def calculate_euclidean_distance_of_two_points(p1:tuple, p2:tuple) -> float:
 def function_2(x):
     return x**2 + 6*x + 9
 
+def ex_18():
+    result = 7 // 3
+    other_int = int(2.7)
+    return result == other_int
+
+def ex_19():
+    return type('10') == type(10)
+
+def ex_20():
+    return int('9.8') == 10
+
+def ex_21():
+    hours = int(input("Enter hours: "))
+    rate = int(input("Enter rate per hour: "))
+    print(f"Your weekly earning is {hours*rate}")
+
+def ex_22():
+    years = int(input("Enter number of years you have lived: "))
+    seconds = years * 31536000
+    print(f"You have lived for {seconds} seconds.")
+
+def ex_23():
+    table = [
+        [1,1,1,1,1],
+        [2,1,2,4,8],
+        [3,1,3,9,27],
+        [4,1,4,16,64],
+        [5,1,5,25,125]
+    ]
+
+    for row in table:
+        for i, number in enumerate(row):
+            end = "\n" if i == len(row)-1 else " "
+            print(number, end=end)
+
 if __name__ == "__main__":
     
     # age = 24
     # my_height = 1.83
     # complex_number = 1j
     
-    # my_function = Linear_function(slope=2, y_intercept=-2)
+    my_function = Linear_function(slope=2, y_intercept=-2)
     # 
     # slope = my_function.calculate_slope()
     # print(slope)
     # 
-    # x_intercept = my_function.calculate_x_intercept()
-    # print(x_intercept)
+    x_intercept = my_function.calculate_x_intercept()
+    print(x_intercept)
     # 
     # y_intercept = my_function.calculate_y_intercept()
     # print(y_intercept)
@@ -239,19 +274,31 @@ if __name__ == "__main__":
     
     # print(function_2(-3))
     
-    print(len("python"))
-    print(len("dragon"))
-    print(len("python") > len("dragon"))
+    # print(len("python"))
+    # print(len("dragon"))
+    # print(len("python") > len("dragon"))
+    # 
+    # print("on" in "python" and "on" in "dragon")
+    # 
+    # print("jargon" in "I hope this course is not full of jargon")
+    # 
+    # print(str(float(len("python"))))
+    # 
+    # number = 3
+    # remainder = number % 2
+    # if remainder == 0:
+    #     print("dividable by 2")
+    # else:
+        #     print("not dividable by 2")
     
-    print("on" in "python" and "on" in "dragon")
-    
-    print("jargon" in "I hope this course is not full of jargon")
-    
-    print(str(float(len("python"))))
-    
-    number = 3
-    remainder = number % 2
-    if remainder == 0:
-        print("dividable by 2")
-    else:
-        print("not dividable by 2")
+    print(ex_18())
+
+    print(ex_19())
+
+    #print(ex_20())
+
+    # ex_21()
+
+    # ex_22()
+
+    ex_23()
