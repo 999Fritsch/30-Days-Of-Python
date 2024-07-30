@@ -1,5 +1,5 @@
 
-# Single line comment
+"""# Single line comment
 letter = 'P'                # A string could be a single character or a bunch of texts
 print(letter)               # P
 print(len(letter))          # 1
@@ -14,13 +14,13 @@ multiline_string = '''I am a teacher and enjoy teaching.
 I didn't find anything as rewarding as empowering people.
 That is why I created 30 days of python.'''
 print(multiline_string)
-# Another way of doing the same thing
-multiline_string = """I am a teacher and enjoy teaching.
-I didn't find anything as rewarding as empowering people.
-That is why I created 30 days of python."""
-print(multiline_string)
+# Another way of doing the same thing"""
+#multiline_string = """I am a teacher and enjoy teaching.
+#I didn't find anything as rewarding as empowering people.
+#That is why I created 30 days of python."""
+#print(multiline_string)
 
-# String Concatenation
+"""# String Concatenation
 first_name = 'Asabeneh'
 last_name = 'Yetayeh'
 space = ' '
@@ -245,4 +245,107 @@ print(challenge.swapcase())  # tHIRTY dAYS oF pYTHON
 challenge = 'thirty days of python'
 print(challenge.startswith('thirty')) # True
 challenge = '30 days of python'
-print(challenge.startswith('thirty')) # False
+print(challenge.startswith('thirty')) # False"""
+
+def ex_01():
+    strings = ["Thirty", "Days", "Of", "Python"]
+    print(" ".join(strings))
+
+def ex_02():
+    strings = ["Coding", "for", "All"]
+    print(" ".join(strings))
+
+
+if __name__ == "__main__":
+
+    #ex_01()
+
+    # ex_02()
+
+    company = "Coding For All"
+
+    print(company)
+
+    print(len(company))
+
+    print(company.upper())
+
+    print(company.lower())
+
+    print(company.capitalize())
+    print(company.title())
+    print(company.swapcase())
+
+    print(company[7:])
+
+    print(f"Index: {company.index("Coding").is_integer()}")
+
+    company = 'Python' + company[6:]
+    print(company)
+
+    company = "Python for Everyone"
+    company = company.replace("Everyone", "All")
+    print(company)
+
+    print(company.split(" "))
+
+    print("Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon".split(", "))
+
+    coding = "Coding For All"
+    print(coding[0])
+
+    print(coding[-1:])
+
+    print(coding[10])
+
+    company = company.replace("All", "Everyone")
+    letters = [letter[:1] for letter in company.title().split(" ")]
+    print(" ".join(letters))
+
+    print("".join([letter[:1] for letter in coding.title().split(" ")]))
+
+    print(coding.index("C"))
+
+    print(coding.index("F"))
+
+    print(coding.rfind("l"))
+
+    sentence = "You cannot end a sentence with because because because is a conjunction"
+    print(sentence.index("because"))
+
+    print(sentence.rindex("because"))
+
+    print(sentence[0:31]+sentence[47+len("because"):])
+
+    print(coding.startswith("Coding"))
+
+    print(coding.endswith("coding"))
+
+    print("   Coding For All      ".removeprefix("   ").removesuffix("      "))
+
+    print("30DayOfPython".isidentifier())
+
+    print("thirty_days_of_python".isidentifier())
+
+    libraries = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+    print("# ".join(libraries))
+
+    print("""I am enjoying this challenge.\n
+I just wonder what is next.""")
+    
+    print("Name\t\tAge\tCountry\tCity".expandtabs())
+    print("Asabeneh\t250\tFinland\tHelsinki".expandtabs())
+
+    radius = 10
+    area = 3.14 * radius ** 2
+    print(f"""radius = {radius}
+area = 3.14 * radius ** 2
+the area of a circle with radius {radius} is {area} meters square""")
+    
+    print(f"""8 + 6 = {8+6}
+8 - 6 = {8-6}
+8 * 6 = {8*6}
+8 / 6 = {8/6}
+8 % 6 = {8%6}
+8 // 6 = {8//6}
+8 ** 6 = {8**6}""")
